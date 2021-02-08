@@ -1,4 +1,45 @@
-## Node Version Manager (NVM)
+
+
+
+
+    
+
+## OVERVIEW
+Had enough of your daily grind and the third blizzard of the year that's brought more snow than you're mentally equpiied to deal with? That makes two of us! Are you in desperate need of a vacation soon or else you think you'll finally lose it?? I know I am! No worries mon! Coconut Craze has got you covered. Be transported to an island paradise where your only worry is maintaining your electrolyte balance by catching the falling coconuts in your basket. Get really lucky and catch a mango or two. But be warned there are icky island spiders eager to make their way into your basket too. Zone out as you tackle this challenge in a sunny setting while jamming out to a calypso beat. Time for some fun in the sun! 
+
+## FUNCTIONALITY AND MVPs
+In Coco Craze, users will be able to:
+* Score points by catching coconuts in their baskets
+* Lose a life by missing a coconut or catching a spider
+* Gain a life by catching a mango
+In addition, this project will include:
+* Cool Carribean facts
+* Sweet Steelpan jams
+
+MVPs:
+* User Instructions, Styling, Page Layout
+* Falling Coconut/Basket Catch Logic
+* Spider and Mango life logic
+
+
+## WIREFRAMES
+
+
+
+## TECHNOLOGIES
+
+* HTML 5 Canvas
+
+* Vanilla JavaScript
+
+
+## IMPLEMENTATION TIMELINE
+* User Instructions, Styling, Page Layout(1 Day)
+* Falling Coconut/Basket Catch Logic(2 Days)
+* Spider and Mango life logic(1 day)
+
+
+<!-- ## Node Version Manager (NVM)
 - To find out which version of node your machine is currently running, use the command `node -v` in your terminal
 - We want to build our projects in the latest stable build that is supported by all of our dependencies.
 - For easy node version management, we'll use the [Node Version Manager](https://github.com/nvm-sh/nvm)
@@ -227,4 +268,4 @@ We can use homebrew to install the manager:
         <script src="./dist/main.js"></script>
     </body>
     </html>
-    ```
+    ``` -->
