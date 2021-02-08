@@ -1,6 +1,6 @@
 
 
-
+![Alt Text](dist/images/logo_no_bg.png)
 
     
 
@@ -24,7 +24,7 @@ MVPs:
 
 
 ## WIREFRAMES
-
+![Alt Text](dist/images/wireframes.png)
 
 
 ## TECHNOLOGIES
