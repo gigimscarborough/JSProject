@@ -5,13 +5,14 @@
     
 
 ## OVERVIEW
-Had enough of your daily grind and the third blizzard of the year that's brought more snow than you're mentally equpiied to deal with? That makes two of us! Are you in desperate need of a vacation soon or else you think you'll finally lose it?? I know I am! No worries mon! Coconut Craze has got you covered. Be transported to an island paradise where your only worry is maintaining your electrolyte balance by catching the falling coconuts in your basket. Get really lucky and catch a mango or two. But be warned there are icky island spiders eager to make their way into your basket too. Zone out as you tackle this challenge in a sunny setting while jamming out to a calypso beat. Time for some fun in the sun! 
+Had enough of your daily grind and the third blizzard of the year that's brought more snow than you're mentally equipped to deal with? That makes two of us! Are you in desperate need of a vacation soon or else you think you'll finally lose it?? I know I am! No worries mon! Coconut Craze has got you covered. Be transported to an island paradise where your only worry is maintaining your electrolyte balance by catching the falling coconuts in your basket. Get really lucky and catch a mango or two. But be warned there are icky island spiders eager to make their way into your basket too. Zone out as you tackle this challenge in a sunny setting while jamming out to a calypso beat. Time for some fun in the sun! 
 
 ## FUNCTIONALITY AND MVPs
 In Coco Craze, users will be able to:
 * Score points by catching coconuts in their baskets
 * Lose a life by missing a coconut or catching a spider
 * Gain a life by catching a mango
+
 In addition, this project will include:
 * Cool Carribean facts
 * Sweet Steelpan jams
