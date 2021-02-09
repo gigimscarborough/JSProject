@@ -1,104 +1,50 @@
 import "./styles/index.scss";
-import "./images/yoda-stitch.jpg";
-import canvasExample from "./scripts/canvas";
-import Square from "./scripts/square";
-import { DOMExample } from "./scripts/DOMExample";
-const currentStateObj = {
-  currentExample: null,
-  currentEventListeners: [],
-};
+import Basket from './scripts/basket'
+import Coconut from './scripts/coconut'
+import Game from './scripts/game'
 
-document.querySelector("#canvas-demo").addEventListener("click", startCanvas);
-document.querySelector("#DOM-demo").addEventListener("click", startDOM);
 
-function startDOM() {
-  unregisterEventListeners();
-  clearDemo();
-  currentStateObj.currentExample = "DOMDEMO";
-  DOMExample();
+
+const howTo = document.getElementById("how-to-play");
+const scroll = document.getElementById("scroll-background")
+
+
+howTo.onclick = function () {
+  scroll.style.display = "block";
 }
 
-function startCanvas() {
-  clearDemo();
-  unregisterEventListeners();
-  currentStateObj.currentExample = "CANVASDEMO";
-  const canvas = new canvasExample();
-  canvas.createCanvas();
-  const squares = [new Square(canvas.ctx, canvas.coords, canvas.fillColor)];
-
-  let animating = true;
-
-  const animation = () => {
-    canvas.clearCanvas();
-    if (animating) squares.forEach((sq) => sq.updateSquare(canvas.fillColor));
-    squares.forEach((sq) => sq.drawSquare());
-    window.requestAnimationFrame(animation);
-    squares.forEach((sq) => {
-      if (sq.coords[0] + sq.coords[2] > window.innerWidth)
-        sq.reverseAnimation();
-      if (sq.coords[0] < 0) sq.reverseAnimation();
-    });
-  };
-
-  window.requestAnimationFrame(animation);
-
-  window.addEventListener("keydown", handleKeyDown);
-  currentStateObj.currentEventListeners.push([
-    "window",
-    "keydown",
-    handleKeyDown,
-  ]);
-
-  window.addEventListener("mousedown", handleMouseDown);
-  currentStateObj.currentEventListeners.push([
-    "window",
-    "mousedown",
-    handleMouseDown,
-  ]);
-
-  function handleKeyDown(event) {
-    if (event.which === 32) {
-      event.preventDefault();
-      squares.forEach((sq) => sq.reverseAnimation());
-      canvas.setColor(`#${Math.floor(Math.random() * 16777215).toString(16)}`);
-    }
-  }
-
-  function handleMouseDown(event) {
-    event.preventDefault();
-    squares.push(
-      new Square(
-        canvas.ctx,
-        canvas.coords.map((co) => co + 25),
-        canvas.fillColor
-      )
-    );
-    // animating = !animating;
+window.onclick = function (e) {
+  debugger
+  if (e.target === scroll) {
+    scroll.style.display = "none";
   }
 }
 
-function unregisterEventListeners() {
-  while (currentStateObj.currentEventListeners.length) {
-    let [
-      selector,
-      event,
-      handler,
-    ] = currentStateObj.currentEventListeners.pop();
-    if (selector === "window") {
-      window.removeEventListener(event, handler);
-      console.log(handler);
-    } else {
-      document.querySelector(selector).removeEventListener(event, handler);
-    }
-  }
-}
 
-function clearDemo() {
-  if (currentStateObj.currentExample === "CANVASDEMO")
-    document.body.removeChild(document.querySelector("canvas"));
-  if (currentStateObj.currentExample === "DOMDEMO") {
-    [...document.querySelectorAll(".card")].forEach((elem) =>
-      document.body.removeChild(elem)
-    );
-  }
-}
+let canvas = document.getElementById("game-canvas");
+let ctx = canvas.getContext('2d');
+let ctxHeight = canvas.height;
+let ctxWidth = canvas.width;
+let game = new Game();
+game.startGame();
+
+debugger
+
+
+ctx.clearRect(0, 0, ctxWidth, ctxHeight);
+
+
+// let basket = new Basket(ctxWidth, ctxHeight, canvas);
+
+// let coconut = new Coconut(ctxWidth, ctxHeight);
+
+// function loop(){
+  
+//   coconut.move(ctx);
+//   basket.draw(ctx);
+// }
+
+setInterval(game.draw, 10)
+
+
+
